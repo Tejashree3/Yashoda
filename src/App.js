@@ -6,6 +6,7 @@ import HeroBanner from './component/HeroBanner';
 import CardSection from './component/CardSection';
 import Footer from './component/Footer';
 import AboutUs from './component/About';
+import Contactus from './component/Contactus';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
 <HeroBanner/>
 {/* <CardSection/> */}
 <AboutUs/>
+<Contactus/>
 <Footer/>
-
 </>
   );
 }

@@ -10,7 +10,7 @@ import ServiceCard from "./ServiceCard";
 const CardSection = () => {
   return (
     <>
-      <div className="absolute z-10 left-1/2 -bottom-20 transform -translate-x-1/2 w-full px-6 md:px-20">
+      <div className="absolute z-10 left-1/2 -bottom-28 transform -translate-x-1/2 w-full px-6 md:px-20">
         {/* Mobile Carousel */}
         <div className="block md:hidden">
           <Swiper

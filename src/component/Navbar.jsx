@@ -12,10 +12,10 @@ const Navbar = () => {
   return (
     <nav className="relative z-50">
       {/* Navbar */}
-      <div className="bg-white shadow-md px-4 py-4 flex justify-between items-center">
+      <div className="bg-white shadow-md px-20 py-4 flex justify-between items-center">
         <div className="text-xl font-bold text-orange-600">Industrify</div>
 
-        <ul className="hidden md:flex gap-6 text-sm font-semibold">
+        <ul className="hidden md:flex gap-6 text-md font-semibold">
           {menuItems.map((item) => (
             <li
               key={item}

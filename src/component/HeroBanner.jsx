@@ -31,7 +31,7 @@ const HeroBanner = () => {
           {banners.map((img, index) => (
             <SwiperSlide key={index}>
               <div
-                className="bg-cover bg-center h-[80vh] flex items-center"
+                className="bg-cover bg-center h-[90vh] flex items-center"
                 style={{ backgroundImage: `url(${img})` }}
               >
                 <div className="bg-black bg-opacity-50 w-full h-full flex items-center px-6 md:px-20">
