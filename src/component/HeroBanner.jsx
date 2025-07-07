@@ -42,7 +42,7 @@ const HeroBanner = () => {
                     transition={{ duration: 0.8 }}
                     key={index}
                   >
-                    <p className="text-sm text-red-500 mb-2 font-semibold">
+                    <p className="text-sm text-[#40afe0] mb-2 font-semibold">
                       WE PROVIDE BEST SATISFIED WORK
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -54,7 +54,7 @@ const HeroBanner = () => {
                       change from an agrarian and handicraft economy to one
                       dominated by industry and machine manufacturing.
                     </p>
-                    <button className="mt-6 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-md">
+                    <button className="mt-6 bg-[#40afe0] hover:bg-[#40afe0] text-white px-6 py-3 rounded-md">
                       Learn More
                     </button>
                   </motion.div>

@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo and Description */}
         <div>
-          <h2 className="text-2xl font-bold text-orange-500 mb-4">Yashoda Enterprises</h2>
+          <h2 className="text-2xl font-bold text-[#40afe0] mb-4">Yashoda Enterprises</h2>
           <p className="text-sm">
             Dealer in Heat Pumps, Industrial Valves, and expert in fabrication & machining of
             standard and non-standard components.
@@ -13,19 +13,19 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-orange-400">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-4 text-[#40afe0]">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-orange-300">Home</a></li>
-            <li><a href="#" className="hover:text-orange-300">About</a></li>
-            <li><a href="#" className="hover:text-orange-300">Services</a></li>
-            <li><a href="#" className="hover:text-orange-300">Projects</a></li>
-            <li><a href="#" className="hover:text-orange-300">Contact</a></li>
+            <li><a href="#" className="hover:text-[#40afe0">Home</a></li>
+            <li><a href="#" className="hover:text-[#40afe0">About</a></li>
+            <li><a href="#" className="hover:text-[#40afe0">Services</a></li>
+            <li><a href="#" className="hover:text-[#40afe0">Projects</a></li>
+            <li><a href="#" className="hover:text-[#40afe0">Contact</a></li>
           </ul>
         </div>
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-orange-400">Our Services</h3>
+          <h3 className="text-lg font-semibold mb-4 text-[#40afe0]">Our Services</h3>
           <ul className="space-y-2 text-sm">
             <li>Heat Pump Installation</li>
             <li>Industrial Piping</li>
@@ -37,7 +37,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-orange-400">Contact Us</h3>
+          <h3 className="text-lg font-semibold mb-4 text-[#40afe0]">Contact Us</h3>
           <p className="text-sm mb-2">
             📍 Gat no. 162B, Tower line, Triveni Nagar, Talawade, Pune – 412109
           </p>

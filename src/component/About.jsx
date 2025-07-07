@@ -25,7 +25,7 @@ const AboutUs = () => {
   <span className="block mt-4">for Industrial Solutions</span>
 </h2>
         <p className="text-gray-600 text-lg mb-4">
-          <span className="inline-block w-3 h-3 bg-orange-500 mr-2 align-middle"></span>
+          <span className="inline-block w-3 h-3 bg-[#40afe0] mr-2 align-middle"></span>
           Industrify is a leading international infrastructure group. They
           finance, develop, build and maintain innovative and efficient
           infrastructure that underpins daily life.
@@ -36,7 +36,7 @@ const AboutUs = () => {
           served include education, health and defence.
         </p>
 
-        <button className="mt-12 px-6 py-3 bg-orange-500 text-white font-medium hover:bg-orange-600 transition rounded-sm">
+        <button className="mt-12 px-6 py-3 bg-[#40afe0] text-white font-medium hover:bg-orange-600 transition rounded-sm">
           About More
         </button>
       </div>

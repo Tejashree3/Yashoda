@@ -73,7 +73,7 @@ const Contactus = () => {
 
   <button
     type="submit"
-    className="bg-[#ff4b2b] px-6 py-3 text-white font-semibold rounded hover:bg-[#e13e1d] transition"
+    className="bg-[#40afe0] px-6 py-3 text-white font-semibold rounded hover:bg-[#e13e1d] transition"
   >
     SEND NOW
   </button>
@@ -86,7 +86,7 @@ const Contactus = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 text-center mt-16 gap-14">
       {/* Address */}
       <div className="flex flex-col rounded-md p-6 shadow-lg items-center group">
-        <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#ff7a00]">
+        <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]">
           <FaMapMarkerAlt className="text-xl" />
         </div>
         <p className="text-sm">3567 Melbourn, EA 265, Australia</p>
@@ -94,7 +94,7 @@ const Contactus = () => {
 
       {/* Email */}
       <div className="flex flex-col p-6 rounded-md shadow-lg items-center group">
-        <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#ff7a00]">
+        <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]">
           <FaEnvelope className="text-xl" />
         </div>
         <p className="text-sm mb-2">info@industrify.com</p>
@@ -103,7 +103,7 @@ const Contactus = () => {
 
       {/* Phone */}
       <div className="flex flex-col p-6 rounded-md shadow-lg items-center group">
-        <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#ff7a00]">
+        <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]">
           <FaPhoneAlt className="text-xl" />
         </div>
         <p className="text-sm">+18-4875828</p>

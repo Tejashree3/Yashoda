@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-
+import logo from "../asset/logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,14 +12,15 @@ const Navbar = () => {
   return (
     <nav className="relative z-50">
       {/* Navbar */}
-      <div className="bg-white shadow-md px-20 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-orange-600">Industrify</div>
+      <div className="bg-white shadow-md px-20 py-2 flex justify-between items-center">
+        {/* <div className="text-xl font-bold text-orange-600">Industrify</div> */}
+        <img src={logo} className="w-16 h-16" alt="" />
 
         <ul className="hidden md:flex gap-6 text-md font-semibold">
           {menuItems.map((item) => (
             <li
               key={item}
-              className={`cursor-pointer ${item === "Home" ? "text-orange-500" : ""}`}
+              className={`cursor-pointer ${item === "Home" ? "text-[#40afe0]" : ""}`}
             >
               {item}
             </li>
