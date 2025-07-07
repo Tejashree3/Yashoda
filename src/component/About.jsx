@@ -36,7 +36,7 @@ const AboutUs = () => {
           served include education, health and defence.
         </p>
 
-        <button className="mt-12 px-6 py-3 bg-[#40afe0] text-white font-medium hover:bg-orange-600 transition rounded-sm">
+        <button className="mt-12 px-6 py-3 bg-[#40afe0] text-white font-medium hover:bg-orange-600 transition rounded-md">
           About More
         </button>
       </div>
