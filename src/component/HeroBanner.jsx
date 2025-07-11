@@ -11,6 +11,7 @@ import banner1 from "../asset/background.png";
 import banner2 from "../asset/background.png";
 import banner3 from "../asset/background.png";
 import CardSection from "./CardSection";
+import Button from "./commonComponents/Button";
 
 const banners = [banner1, banner2, banner3];
 
@@ -54,9 +55,7 @@ const HeroBanner = () => {
                       change from an agrarian and handicraft economy to one
                       dominated by industry and machine manufacturing.
                     </p>
-                    <button className="mt-6 bg-[#40afe0] hover:bg-[#40afe0] text-white px-6 py-3 rounded-md">
-                      Learn More
-                    </button>
+                    <Button>Learn More</Button>
                   </motion.div>
                 </div>
               </div>
@@ -64,8 +63,7 @@ const HeroBanner = () => {
           ))}
         </Swiper>
 
-<CardSection/>
-
+        <CardSection />
       </div>
 
       {/* SPACER BELOW CARDS */}
