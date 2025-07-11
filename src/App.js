@@ -7,6 +7,7 @@ import CardSection from './component/CardSection';
 import Footer from './component/Footer';
 import AboutUs from './component/About';
 import Contactus from './component/Contactus';
+import VisionMissionValues from './component/VisionMissionValues';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 <HeroBanner/>
 {/* <CardSection/> */}
 <AboutUs/>
+<VisionMissionValues/>
 <Contactus/>
 <Footer/>
 </>
