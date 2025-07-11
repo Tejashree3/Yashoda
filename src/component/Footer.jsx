@@ -1,14 +1,21 @@
+import logo from "../asset/logo.png"
+
 const Footer = () => {
   return (
     <footer className="bg-[#0b0c1b] text-white px-6 md:px-20 py-10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo and Description */}
-        <div>
-          <h2 className="text-2xl font-bold text-[#40afe0] mb-4">Yashoda Enterprises</h2>
+     
+        <div className="flex justify-center flex-col">
+                  <img src={logo} className="w-16 h-16 mb-2" alt="" />
+
+          <h2 className="text-2xl font-bold text-[#40afe0] mb-2">Yashoda Enterprises</h2>
+        
           <p className="text-sm">
             Dealer in Heat Pumps, Industrial Valves, and expert in fabrication & machining of
             standard and non-standard components.
           </p>
+
         </div>
 
         {/* Quick Links */}
