@@ -1,27 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
-import TopBar from './component/TopBar';
-import Navbar from './component/Navbar';
-import HeroBanner from './component/HeroBanner';
-import CardSection from './component/CardSection';
-import Footer from './component/Footer';
-import AboutUs from './component/About';
-import Contactus from './component/Contactus';
-import VisionMissionValues from './component/VisionMissionValues';
 
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Product from "./pages/Product";
+import Contact from "./pages/Contact";
+
+const App = () => {
   return (
-<>
-{/* <TopBar/> */}
-<Navbar/>
-<HeroBanner/>
-{/* <CardSection/> */}
-<AboutUs/>
-<VisionMissionValues/>
-<Contactus/>
-<Footer/>
-</>
+    <Router>
+      {/* Basic Navigation */}
+
+      {/* Route Definitions */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+
