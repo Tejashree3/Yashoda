@@ -1,18 +1,25 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../asset/logo.png"
+import logo from "../asset/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ["Home", "Pages", "Services", "Projects", "Blogs", "Contact"];
+  const menuItems = [
+    "Home",
+    "Pages",
+    "Services",
+    "Projects",
+    "Blogs",
+    "Contact",
+  ];
 
   return (
     <nav className="relative z-50">
       {/* Navbar */}
-      <div className="bg-white shadow-md px-20 py-2 flex justify-between items-center">
+      <div className="bg-background shadow-md px-20 py-2 flex justify-between items-center">
         {/* <div className="text-xl font-bold text-orange-600">Industrify</div> */}
         <img src={logo} className="w-16 h-16" alt="" />
 
@@ -20,7 +27,9 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item}
-              className={`cursor-pointer ${item === "Home" ? "text-[#40afe0]" : ""}`}
+              className={`cursor-pointer ${
+                item === "Home" ? "text-[#40afe0]" : ""
+              }`}
             >
               {item}
             </li>
@@ -35,7 +44,7 @@ const Navbar = () => {
             animate={{ rotate: 180 }}
             exit={{ rotate: 0 }}
             transition={{ duration: 0.3 }}
-            className="text-2xl cursor-pointer"
+            className="text-2xl cursor-pointer text-text_navbar"
             onClick={toggleMenu}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
@@ -51,13 +60,15 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-[60px] left-0 w-full bg-white shadow-md px-4 py-4 md:hidden"
+            className="absolute top-[60px] left-0 w-full bg-background shadow-md px-4 py-4 md:hidden"
           >
             <ul className="flex flex-col gap-4 text-sm font-semibold">
               {menuItems.map((item) => (
                 <li
                   key={item}
-                  className={`cursor-pointer ${item === "Home" ? "text-orange-500" : ""}`}
+                  className={`cursor-pointer ${
+                    item === "Home" ? "text-orange-500" : "text-text_navbar"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
