@@ -5,12 +5,8 @@ import AboutUs from "../About";
 const AboutComponent = () => {
   return (
     <div className="w-full px-4 py-8 flex flex-col gap-4">
-      <Header
-        title="Know"
-        // subtitle="We Offer"
-        emphasis="Us"
-        color="#b80000"
-      />
+               Why Choose Us
+
 <AboutUs/>    </div>
   );
 };

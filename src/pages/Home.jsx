@@ -7,6 +7,7 @@ import Contactus from "../component/Contactus";
 import VisionMissionValues from "../component/VisionMissionValues";
 import GalleryComponent from "../component/Gallery/GalleryComponent";
 import Numericaldata from "../component/Numericaldata";
+import WhyChooseUs from "../component/WhyChooseUs";
 const Home = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const Home = () => {
       <AboutUs />
       <Numericaldata/>
       <VisionMissionValues />
+      <WhyChooseUs/>
       <GalleryComponent isHomePage={true} />
       {/* <Contactus /> */}
     </>
