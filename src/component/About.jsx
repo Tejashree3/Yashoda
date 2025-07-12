@@ -18,12 +18,6 @@ const AboutUs = () => {
 
       {/* Right Side - Content */}
       <div className="w-full md:w-1/2 px-6 text-left">
-        <Header
-          title="Welcome"
-          subtitle="to our website"
-          emphasis="Now"
-          color="#b80000"
-        />
         <p className="text-sm uppercase text-[#1d1d4f] tracking-widest mb-8">
           ● Welcome to Industrify
         </p>

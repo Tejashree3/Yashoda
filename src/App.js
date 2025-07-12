@@ -1,27 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import TopBar from './component/TopBar';
-import Navbar from './component/Navbar';
-import HeroBanner from './component/HeroBanner';
-import CardSection from './component/CardSection';
-import Footer from './component/Footer';
-import AboutUs from './component/About';
-import Contactus from './component/Contactus';
-import VisionMissionValues from './component/VisionMissionValues';
+import Layout from "./layout/Layout";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-function App() {
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
+import Product from "./pages/Product";
+import Contact from "./pages/Contact";
+
+const App = () => {
   return (
-<>
-{/* <TopBar/> */}
-<Navbar/>
-<HeroBanner/>
-{/* <CardSection/> */}
-<AboutUs/>
-<VisionMissionValues/>
-<Contactus/>
-<Footer/>
-</>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="product" element={<Product />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+
