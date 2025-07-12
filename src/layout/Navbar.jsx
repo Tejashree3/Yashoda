@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../asset/logo.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,29 +11,38 @@ const Navbar = () => {
 
   const menuItems = [
     "Home",
-    "Pages",
+    "About",
     "Services",
-    "Projects",
-    "Blogs",
+    "Product",
+    "Gallery",
     "Contact",
   ];
+
+  const getPath = (item) =>
+    item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
 
   return (
     <nav className="relative z-50">
       {/* Navbar */}
       <div className="bg-background shadow-md px-20 py-2 flex justify-between items-center">
-        {/* <div className="text-xl font-bold text-orange-600">Industrify</div> */}
-        <img src={logo} className="w-16 h-16" alt="" />
+        <NavLink to="/">
+          <img src={logo} className="w-16 h-16" alt="Logo" />
+        </NavLink>
 
+        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-md font-semibold">
           {menuItems.map((item) => (
-            <li
-              key={item}
-              className={`cursor-pointer ${
-                item === "Home" ? "text-[#40afe0]" : ""
-              }`}
-            >
-              {item}
+            <li key={item}>
+              <NavLink
+                to={getPath(item)}
+                className={({ isActive }) =>
+                  `cursor-pointer ${
+                    isActive ? "text-[#40afe0]" : "text-text_navbar"
+                  }`
+                }
+              >
+                {item}
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -64,14 +75,18 @@ const Navbar = () => {
           >
             <ul className="flex flex-col gap-4 text-sm font-semibold">
               {menuItems.map((item) => (
-                <li
-                  key={item}
-                  className={`cursor-pointer ${
-                    item === "Home" ? "text-orange-500" : "text-text_navbar"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
+                <li key={item}>
+                  <NavLink
+                    to={getPath(item)}
+                    className={({ isActive }) =>
+                      `cursor-pointer ${
+                        isActive ? "text-orange-500" : "text-text_navbar"
+                      }`
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item}
+                  </NavLink>
                 </li>
               ))}
             </ul>
