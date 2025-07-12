@@ -1,38 +1,125 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Header from "./commonComponents/Header";
 
+// Toaster Component with Animation
+const Toaster = ({ message, onClose }) => (
+  <AnimatePresence>
+    {message && (
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 100, opacity: 0 }}
+        transition={{ duration: 0.4 }}
+        className="fixed bottom-6 right-6 bg-[#0c0c3c] text-white px-6 py-3 rounded shadow-lg z-50"
+      >
+        <div className="flex justify-between items-center">
+          <span>{message}</span>
+          <button className="ml-4 text-white text-xl" onClick={onClose}>
+            ×
+          </button>
+        </div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+);
+
 const Contactus = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [showToaster, setShowToaster] = useState(false);
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.fullName.trim()) newErrors.fullName = "Name is required.";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid.";
+    }
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required.";
+    if (!formData.message.trim()) newErrors.message = "Message is required.";
+    return newErrors;
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+    setErrors({ ...errors, [e.target.id]: "" });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formErrors = validate();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+    } else {
+      setFormData({ fullName: "", email: "", subject: "", message: "" });
+      setErrors({});
+      setShowToaster(true);
+      setTimeout(() => setShowToaster(false), 4000);
+    }
+  };
+
   return (
-    <div className="w-full px-4 py-8 flex flex-col gap-4">
-      <Header
-        title="Get In"
-        subtitle="With Us"
-        emphasis="Touch"
-        color="#b80000"
+    <div className="w-full px-4 py-8 flex flex-col gap-4 relative">
+      <Toaster
+        message={showToaster ? "Service is currently not available." : ""}
+        onClose={() => setShowToaster(false)}
       />
-      <div className="px-4 md:px-20 py-16 ">
-        {/* Top Section: Map and Form */}
+
+      {/* Animated Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Header
+          title="Get In"
+          subtitle="With Us"
+          emphasis="Touch"
+          color="#b80000"
+        />
+      </motion.div>
+
+      <div className="px-4 md:px-20 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Google Map Embed */}
-          <div className="w-full h-[600px]">
+          {/* Map */}
+          <motion.div
+            className="w-full h-[600px]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.5232394156313!2d91.82921157593192!3d22.368358679630915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd891a9252b4f%3A0x78e95a3bb51247d9!2sDewanhat%20Overbridge!5e0!3m2!1sen!2sbd!4v1620568780800!5m2!1sen!2sbd"
-              width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.82226057719!2d73.78246898643589!3d18.671970237202917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b77a3fbeaa05%3A0x5323817838af9f0c!2s162%2C%20Tower%20Line%20Rd%2C%20Premsadan%20Housing%20Society%2C%20Hanuman%20Nagar%2C%20Chikhali%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20412114!5e0!3m2!1sen!2sin!4v1752329219907!5m2!1sen!2sin"
               height="100%"
+              width="100%"
               allowFullScreen=""
               loading="lazy"
               className="rounded-md border"
             ></iframe>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div className="bg-[#0c0c3c] text-white px-14 py-14 rounded-md shadow-md">
+          <motion.div
+            className="bg-[#0c0c3c] text-white px-14 py-14 rounded-md shadow-md"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h2 className="text-3xl md:text-4xl font-semibold mb-14">
-              Lets talk…
+              Let’s talk…
             </h2>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="flex flex-col md:flex-row gap-4">
+                {/* Name */}
                 <div className="flex-1">
                   <label
                     className="block text-sm font-medium mb-2"
@@ -43,10 +130,21 @@ const Contactus = () => {
                   <input
                     id="fullName"
                     type="text"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     placeholder="Your Full Name"
-                    className="w-full px-4 py-2 text-black rounded outline-none"
+                    className={`w-full px-4 py-2 text-black rounded outline-none ${
+                      errors.fullName ? "border border-red-500" : ""
+                    }`}
                   />
+                  {errors.fullName && (
+                    <p className="text-red-400 text-xs mt-1">
+                      {errors.fullName}
+                    </p>
+                  )}
                 </div>
+
+                {/* Email */}
                 <div className="flex-1">
                   <label
                     className="block text-sm font-medium mb-2"
@@ -57,12 +155,20 @@ const Contactus = () => {
                   <input
                     id="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="E-mail Address"
-                    className="w-full px-4 py-2 text-black rounded outline-none"
+                    className={`w-full px-4 py-2 text-black rounded outline-none ${
+                      errors.email ? "border border-red-500" : ""
+                    }`}
                   />
+                  {errors.email && (
+                    <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
 
+              {/* Subject */}
               <div>
                 <label
                   className="block text-sm font-medium mb-2"
@@ -73,11 +179,19 @@ const Contactus = () => {
                 <input
                   id="subject"
                   type="text"
-                  placeholder="Website"
-                  className="w-full px-4 py-2 text-black rounded outline-none"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Subject"
+                  className={`w-full px-4 py-2 text-black rounded outline-none ${
+                    errors.subject ? "border border-red-500" : ""
+                  }`}
                 />
+                {errors.subject && (
+                  <p className="text-red-400 text-xs mt-1">{errors.subject}</p>
+                )}
               </div>
 
+              {/* Message */}
               <div>
                 <label
                   className="block text-sm font-medium mb-2"
@@ -88,9 +202,16 @@ const Contactus = () => {
                 <textarea
                   id="message"
                   rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Write Here"
-                  className="w-full px-4 py-2 text-black rounded outline-none"
+                  className={`w-full px-4 py-2 text-black rounded outline-none ${
+                    errors.message ? "border border-red-500" : ""
+                  }`}
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-400 text-xs mt-1">{errors.message}</p>
+                )}
               </div>
 
               <button
@@ -100,37 +221,61 @@ const Contactus = () => {
                 SEND NOW
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Bottom Section: Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 text-center mt-16 gap-14">
-          {/* Address */}
-          <div className="flex flex-col rounded-md p-6 shadow-lg items-center group">
-            <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]">
-              <FaMapMarkerAlt className="text-xl" />
-            </div>
-            <p className="text-sm">3567 Melbourn, EA 265, Australia</p>
-          </div>
-
-          {/* Email */}
-          <div className="flex flex-col p-6 rounded-md shadow-lg items-center group">
-            <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]">
-              <FaEnvelope className="text-xl" />
-            </div>
-            <p className="text-sm mb-2">info@industrify.com</p>
-            <p className="text-sm">admin@industrify.com</p>
-          </div>
-
-          {/* Phone */}
-          <div className="flex flex-col p-6 rounded-md shadow-lg items-center group">
-            <div className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]">
-              <FaPhoneAlt className="text-xl" />
-            </div>
-            <p className="text-sm">+18-4875828</p>
-            <p className="text-sm">+18-4675834</p>
-          </div>
-        </div>
+        {/* Info Cards Section */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 text-center mt-16 gap-14"
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {[
+            {
+              icon: <FaMapMarkerAlt className="text-xl" />,
+              text: "Gat no. 162B, Tower line, Triveni Nagar, Talawade, Pune – 412109",
+            },
+            {
+              icon: <FaEnvelope className="text-xl" />,
+              link: "mailto:yashodaenterprises55@gmail.com",
+              text: "yashodaenterprises55@gmail.com",
+            },
+            {
+              icon: <FaPhoneAlt className="text-xl" />,
+              link: "tel:+917776816182",
+              text: "+91 7776816182",
+            },
+          ].map((card, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col p-6 rounded-md shadow-lg items-center group"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <a
+                href={card.link || "#"}
+                className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]"
+              >
+                {card.icon}
+              </a>
+              {card.link ? (
+                <a href={card.link} className="text-sm hover:underline">
+                  {card.text}
+                </a>
+              ) : (
+                <p className="text-sm">{card.text}</p>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
