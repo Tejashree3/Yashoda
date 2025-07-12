@@ -1,46 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "../commonComponents/Header";
 import { FaArrowRight } from "react-icons/fa";
-
-// Product list
-const Products = [
-  {
-    title: "Custom fence design",
-    image: "/images/fence-design.jpg",
-  },
-  {
-    title: "Fence repair",
-    image: "/images/fence-repair.jpg",
-  },
-  {
-    title: "Fence installation",
-    image: "/images/fence-installation.jpg",
-  },
-  {
-    title: "Staining & sealing",
-    image: "/images/staining.jpg",
-  },
-  {
-    title: "Maintenance Products",
-    image: "/images/maintenance.jpg",
-  },
-  {
-    title: "Maintenance Products",
-    image: "/images/maintenance.jpg",
-  },
-  {
-    title: "Fence installation",
-    image: "/images/fence-installation.jpg",
-  },
-  {
-    title: "Staining & sealing",
-    image: "/images/staining.jpg",
-  },
-  {
-    title: "Maintenance Products",
-    image: "/images/maintenance.jpg",
-  },
-];
+import products from "../../data/product"; // No .json since it's now a JS file
 
 // Framer Motion Variants
 const container = {
@@ -81,7 +42,7 @@ const ProductComponent = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {Products.map((Product, idx) => (
+          {products.map((Product, idx) => (
             <motion.div
               key={idx}
               variants={cardVariant}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import images from "../../data/gallery.json";
+import images from "../../data/gallery"; // No .json since it's now a JS file
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Button from "../commonComponents/Button";
