@@ -61,14 +61,14 @@ const ServiceComponent = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="rounded-lg shadow-md p-10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:bg-orange-500 group"
+            className="rounded-lg shadow-md p-10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:bg-orange_color group"
           >
-            <div className="text-2xl mb-4 bg-white rounded-full w-16 h-16 flex items-center justify-center text-orange-500 group-hover:text-orange transition-colors duration-300">
+            <div className="text-2xl mb-4 bg-white rounded-full w-16 h-16 flex items-center justify-center text-orange_color group-hover:text-orange transition-colors duration-300">
               {service.icon}
             </div>
             <div className="">
               <h3 className="text-3xl pb-4 font-semibold group-hover:text-white flex items-center">
-                <span className="inline-block w-8 min-h-[2px] mr-4 bg-orange-500 group-hover:bg-white transition duration-300"></span>
+                <span className="inline-block w-8 min-h-[2px] mr-4 bg-orange_color group-hover:bg-white transition duration-300"></span>
                 {service.title}
               </h3>
             </div>

@@ -43,7 +43,7 @@ const HeroBanner = () => {
                     transition={{ duration: 0.8 }}
                     key={index}
                   >
-                    <p className="text-sm text-[#40afe0] mb-2 font-semibold">
+                    <p className="text-sm text-orange_color mb-2 font-semibold">
                       WE PROVIDE BEST SATISFIED WORK
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">

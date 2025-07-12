@@ -216,7 +216,7 @@ const Contactus = () => {
 
               <button
                 type="submit"
-                className="bg-[#40afe0] px-6 py-3 text-white font-semibold rounded hover:bg-[#e13e1d] transition"
+                className="bg-orange_color px-6 py-3 text-white font-semibold rounded hover:bg-[#e13e1d] transition"
               >
                 SEND NOW
               </button>
@@ -262,7 +262,7 @@ const Contactus = () => {
             >
               <a
                 href={card.link || "#"}
-                className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#40afe0]"
+                className="bg-[#0c0c3c] text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-orange_color"
               >
                 {card.icon}
               </a>

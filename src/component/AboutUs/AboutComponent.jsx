@@ -5,9 +5,8 @@ import AboutUs from "../About";
 const AboutComponent = () => {
   return (
     <div className="w-full px-4 py-8 flex flex-col gap-4">
-               Why Choose Us
-
-<AboutUs/>    </div>
+      <AboutUs />{" "}
+    </div>
   );
 };
 

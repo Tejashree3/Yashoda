@@ -34,7 +34,7 @@ const AboutUs = () => {
             <span className="block mt-4">formed in 2021.</span>
           </h2>
           <p className="text-gray-600 text-lg mb-4">
-            <span className="inline-block w-3 h-3 bg-[#40afe0] mr-2 align-middle"></span>
+            <span className="inline-block w-3 h-3 bg-orange_color mr-2 align-middle"></span>
             The business scope of our company includes the material supply,
             production, installation, fabrications, and manufacturing of Pharma,
             Food, dairy processing equipment, precision engineering components,

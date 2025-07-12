@@ -17,6 +17,7 @@ module.exports = {
         text_heading: "rgba(var(--text_heading))",
         text_secondary: "rgba(var(--text_secondary))",
         hover: "rgba(var(--hover))",
+        orange_color: "rgba(var(--orange_color))"
       }
     },
   },

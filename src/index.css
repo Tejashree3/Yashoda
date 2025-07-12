@@ -13,10 +13,10 @@
 /* Dark */
 :root {
     --dark_shade_2: 13, 23, 30;
-    --white_color:255, 255, 255;
-    --orange_color: 255, 134, 91;
+    --orange_color: 235, 108, 29;
     --blue_color: 133, 226, 238;
-    --background: 9, 19, 25;
+    --background: 255, 255, 255;
+
 }
 
 /* Light */

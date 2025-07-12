@@ -24,9 +24,9 @@ const Navbar = () => {
   return (
     <nav className="relative z-50">
       {/* Navbar */}
-      <div className=" shadow-md px-20 py-2 flex justify-between items-center">
+      <div className=" shadow-md px-2 md:px-20 py-1 flex justify-between items-center">
         <NavLink to="/">
-          <img src={logo} className="w-16 h-16" alt="Logo" />
+          <img src={logo} className="h-24 md:h-28" alt="Logo" />
         </NavLink>
 
         {/* Desktop Menu */}
@@ -37,7 +37,7 @@ const Navbar = () => {
                 to={getPath(item)}
                 className={({ isActive }) =>
                   `cursor-pointer ${
-                    isActive ? "text-[#40afe0]" : "text-text_navbar"
+                    isActive ? "text-orange_color" : "text-text_navbar"
                   }`
                 }
               >
@@ -71,7 +71,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-[60px] left-0 w-full bg-background shadow-md px-4 py-4 md:hidden"
+            className="absolute top-24 left-0 w-full bg-white shadow-md px-4 py-4 md:hidden"
           >
             <ul className="flex flex-col gap-4 text-sm font-semibold">
               {menuItems.map((item) => (
@@ -80,7 +80,7 @@ const Navbar = () => {
                     to={getPath(item)}
                     className={({ isActive }) =>
                       `cursor-pointer ${
-                        isActive ? "text-orange-500" : "text-text_navbar"
+                        isActive ? "text-orange_color" : "text-text_navbar"
                       }`
                     }
                     onClick={() => setIsOpen(false)}

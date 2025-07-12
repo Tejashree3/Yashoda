@@ -6,50 +6,53 @@ const WhyChooseUs = () => {
   const features = [
     {
       id: "01",
-      title: "Fast & Free Shipping",
-      description: "Get your products delivered quickly and for free.",
+      title: "Precision Manufacturing",
+      description:
+        " Achieve tight tolerances with our advanced capabilities and experienced technical team.",
     },
     {
       id: "02",
-      title: "24/7 Support",
-      description: "Our support team is here to help you anytime.",
+      title: "Quality Assurance",
+      description:
+        " Stringent quality checks and NABL-certified instruments ensure reliable, high-standard output.",
     },
     {
       id: "03",
-      title: "Hassle Free Returns",
-      description: "Return products easily if you’re not satisfied.",
+      title: "Agile & Customized Solutions",
+      description:
+        "Flexible manufacturing that responds quickly to customer demands with tailored solutions.",
     },
     {
       id: "04",
-      title: "Easy to Shop",
-      description: "A seamless and simple shopping experience.",
+      title: "On-Time Delivery",
+      description:
+        " Get your products delivered promptly without compromising durability",
     },
   ];
 
   return (
     <section className=" py-16 px-6 md:px-20">
-        <div className="pb-20">
-
-           <Header
-        title="Why Choose us"
-        // subtitle="We Offer"
-        emphasis="Us"
-        color="#b80000"
-      />
-        </div>
+      <div className="pb-20">
+        <Header
+          title="Why Choose"
+          // subtitle="We Offer"
+          emphasis="Us"
+          color="#b80000"
+        />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         {/* Text Section */}
         <div>
-          <h2 className="text-5okxl font-semibold mb-6 text-gray-800">
-            Why Choose Us
-          </h2>
- <p className="text-lg md:text-xl text-gray-800 max-w-4xl mx-auto mb-10">
-        At Renovex we are committed to revolutionizing the construction industry
-        with innovative, sustainable, and{" "}
-        cost-effective solutions.
-      </p>          <div className="grid grid-cols-2 gap-6">
+          <p className="text-lg md:text-xl text-gray-800 max-w-4xl mx-auto mb-10">
+            With a commitment to precision, quality, and customer satisfaction,
+            we deliver reliable manufacturing solutions tailored to your needs.
+            Our expert team, advanced equipment, and dedication to excellence
+            make us a trusted partner in producing hygienic fittings, automotive
+            components, and precision parts.
+          </p>{" "}
+          <div className="grid grid-cols-2 gap-6">
             {features.map((feature) => (
-             <div
+              <div
                 key={feature.id}
                 className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
               >
@@ -59,9 +62,7 @@ const WhyChooseUs = () => {
                 <p className="font-semibold text-gray-800 mb-1">
                   {feature.title}
                 </p>
-                <p className="text-sm text-gray-500">
-                  {feature.description}
-                </p>
+                <p className="text-sm text-gray-500">{feature.description}</p>
               </div>
             ))}
           </div>

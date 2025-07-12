@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex justify-center flex-col">
           <img src={logo} className="w-16 h-16 mb-2" alt="" />
 
-          <h2 className="text-2xl font-bold text-[#40afe0] mb-2">
+          <h2 className="text-2xl font-bold text-orange_color mb-2">
             Yashoda Enterprises
           </h2>
 
@@ -21,7 +21,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-[#40afe0]">
+          <h3 className="text-lg font-semibold mb-4 text-orange_color">
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
@@ -55,7 +55,7 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-[#40afe0]">
+          <h3 className="text-lg font-semibold mb-4 text-orange_color">
             Our Services
           </h3>
           <ul className="space-y-2 text-sm">
@@ -69,7 +69,7 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-[#40afe0]">
+          <h3 className="text-lg font-semibold mb-4 text-orange_color">
             Contact Us
           </h3>
           <p className="text-sm mb-2">

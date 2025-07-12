@@ -2,7 +2,7 @@ import React from "react";
 
 // Define color styles for different variants
 const VARIANT_STYLES = {
-  primary: "bg-[#40afe0] hover:bg-blue-600 text-white",
+  primary: "bg-orange_color hover:bg-blue-600 text-white",
   success: "bg-green-500 hover:bg-green-600 text-white",
   error: "bg-red-500 hover:bg-red-600 text-white",
   warning: "bg-yellow-500 hover:bg-yellow-600 text-white",
