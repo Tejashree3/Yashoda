@@ -2,9 +2,15 @@ import React from "react";
 import image1 from "../asset/about.png"; // top city image
 import image2 from "../asset/about.png"; // bottom worker image
 import Button from "./commonComponents/Button";
-import Header from "./commonComponents/Header";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/about");
+  };
   return (
     <>
       <section className="w-full bg-[#fff] py-16 px-4 md:px-20 flex flex-col md:flex-row items-center gap-10">
@@ -43,7 +49,9 @@ const AboutUs = () => {
             quality assurance for the product supplied by us.
           </p>
 
-          <Button>About More</Button>
+          {location.pathname !== "/about" && (
+            <Button onClick={handleRedirect}>About More</Button>
+          )}
         </div>
       </section>
     </>
