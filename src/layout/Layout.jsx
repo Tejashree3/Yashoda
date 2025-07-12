@@ -6,17 +6,11 @@ import Footer from "./Footer";
 const Layout = () => {
   const location = useLocation();
 
-  useEffect(() => {
-    // Add a short delay for smoother visual flow (optional)
-    const timeout = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // enables smooth scroll
-      });
-    }, 100); // Delay of 100ms helps with smoother transitions
+  const { pathname } = useLocation();
 
-    return () => clearTimeout(timeout); // Clean up on unmount
-  }, [location.pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="flex flex-col min-h-screen">
