@@ -6,9 +6,10 @@ import Header from "./commonComponents/Header";
 
 const AboutUs = () => {
   return (
+    <>
     <section className="w-full bg-[#fff] py-16 px-4 md:px-20 flex flex-col md:flex-row items-center gap-10">
       {/* Left Side - Images */}
-      <div className="relative w-full md:w-1/2">
+      <div className="relative shadow-xl w-full md:w-1/2">
         <img
           src={image1}
           alt="City"
@@ -40,6 +41,16 @@ const AboutUs = () => {
         <Button>About More</Button>
       </div>
     </section>
+
+
+
+
+
+ 
+
+
+    </>
+
   );
 };
 

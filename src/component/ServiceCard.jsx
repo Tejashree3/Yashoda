@@ -1,6 +1,6 @@
 const ServiceCard = ({ icon, title, description }) => {
   return (
-    <div className="relative group overflow-hidden shadow-lg p-6  text-[#1C1C51] hover:text-white transition-all duration-500">
+    <div className="relative group overflow-hidden shadow-xl p-6 bg-white text-[#1C1C51] hover:text-white transition-all duration-500">
       {/* Expanding orange background from bottom-right */}
       <div className="absolute bottom-4 right-4 w-4 h-4 bg-[#40afe0] z-0  group-hover:w-full group-hover:h-full group-hover:bottom-0 group-hover:right-0 transition-all duration-500 ease-in-out origin-bottom-right"></div>
 
@@ -12,7 +12,7 @@ const ServiceCard = ({ icon, title, description }) => {
           </div>
           <div className="">
             <h3 className="text-2xl pb-4 font-semibold flex items-center">
-              <span className="inline-block w-8 min-h-[2px] mr-4 bg-[#40afe0] group-hover: transition duration-300"></span>
+              <span className="inline-block w-8 min-h-[2px] mr-4 bg-[#40afe0] group-hover:bg-white  transition duration-300"></span>
               {title}
             </h3>
           </div>

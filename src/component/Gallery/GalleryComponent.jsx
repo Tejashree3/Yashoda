@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import images from "../../data/gallery.json";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
+import Button from "../commonComponents/Button";
 
 const GalleryComponent = ({ isHomePage = false }) => {
-  const displayedImages = isHomePage ? images.slice(0, 3) : images;
+  const displayedImages = isHomePage ? images.slice(0, 4) : images;
   const navigate = useNavigate();
 
   return (
-    <div className="w-full px-4 py-8 flex flex-col gap-4">
+    <div className="w-full flex flex-col py-16 px-4 md:px-20  gap-4">
       <Header
         title="Gallery"
         subtitle="Our Workshop & Machines"
@@ -16,11 +17,11 @@ const GalleryComponent = ({ isHomePage = false }) => {
         color="#b80000"
       />
 
-      <div className="grid gap-6 grid-cols-1 md:px-20 py-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-6 grid-cols-1  pt-16 pb-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {displayedImages.map((img, index) => (
           <div
             key={index}
-            className="relative group overflow-hidden rounded-lg shadow-lg h-64"
+            className="relative group overflow-hidden rounded-lg shadow-xl h-72"
           >
             {/* Image as background */}
             <img
@@ -44,15 +45,14 @@ const GalleryComponent = ({ isHomePage = false }) => {
           </div>
         ))}
 
-        {isHomePage && images.length > 3 && (
-          <div
-            onClick={() => navigate("/gallery")}
-            className="flex items-center justify-center bg-gray-900 text-white rounded-lg h-64 cursor-pointer hover:bg-gray-800 transition"
-          >
-            <span className="text-lg font-medium">View More</span>
-          </div>
-        )}
       </div>
+        {isHomePage && images.length > 3 && (
+       <div className="flex justify-center items-center">
+
+            <Button            onClick={() => navigate("/gallery")}
+>View more</Button>
+</div>
+     )}
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
+import Numericaldata from './component/Numericaldata';
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          
+
           <Route path="services" element={<Services />} />
           <Route path="product" element={<Product />} />
           <Route path="gallery" element={<Gallery />} />

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../commonComponents/Header";
+import AboutUs from "../About";
 
 const AboutComponent = () => {
   return (
@@ -10,8 +11,7 @@ const AboutComponent = () => {
         emphasis="Us"
         color="#b80000"
       />
-      <div className="px-4 md:px-20 py-16 ">About</div>
-    </div>
+<AboutUs/>    </div>
   );
 };
 

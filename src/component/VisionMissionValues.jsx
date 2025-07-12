@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./commonComponents/Header";
 
 const VisionMissionValues = () => {
   const sections = [
@@ -26,6 +27,16 @@ const VisionMissionValues = () => {
 
   return (
    <div className="flex flex-col py-16 px-4 md:px-20 ">
+<div className="pb-16">
+
+          <Header
+        title="Mission Vision & Values"
+        subtitle="Our Workshop & Machines"
+        //   emphasis="Now"
+        color="#b80000"
+      />
+</div>
+
   {sections.map((section, index) => (
     <div
       key={index}
