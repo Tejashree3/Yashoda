@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav className="relative z-50">
       {/* Navbar */}
-      <div className="bg-background shadow-md px-20 py-2 flex justify-between items-center">
+      <div className=" shadow-md px-20 py-2 flex justify-between items-center">
         <NavLink to="/">
           <img src={logo} className="w-16 h-16" alt="Logo" />
         </NavLink>
