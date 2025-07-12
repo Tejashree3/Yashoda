@@ -12,16 +12,11 @@
 
 /* Dark */
 :root {
-    --background: 10, 25, 47;
-    --shadow: 4, 12, 122;
-    --secondary_background: 31, 40, 51;
-    --border_normal: 197, 198, 199;
-    --border_highlighter: 102, 252, 241;
-    --text_navbar: 209, 213, 219;
-    --text_secondary: 136, 146, 176;
-    --text_heading: 204, 214, 246;
-    --text_highlighter: 102, 252, 241;
-    --hover: 69, 162, 158;
+    --dark_shade_2: 13, 23, 30;
+    --white_color:255, 255, 255;
+    --orange_color: 255, 134, 91;
+    --blue_color: 133, 226, 238;
+    --background: 9, 19, 25;
 }
 
 /* Light */
