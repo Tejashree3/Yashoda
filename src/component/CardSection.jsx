@@ -22,7 +22,7 @@ const CardSection = () => {
             <SwiperSlide>
               <ServiceCard
                 icon={<FaIndustry size={30} />}
-                title="Industrial Solution"
+                title="Innovation"
                 description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
                 isActive={false}
               />
@@ -30,7 +30,7 @@ const CardSection = () => {
             <SwiperSlide>
               <ServiceCard
                 icon={<FaLeaf size={30} />}
-                title="Eco Development"
+                title="Productivity"
                 description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
                 isActive={true}
               />
@@ -38,7 +38,7 @@ const CardSection = () => {
             <SwiperSlide>
               <ServiceCard
                 icon={<FaTools size={30} />}
-                title="Modern Technology"
+                title="Best Qualities"
                 description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
                 isActive={false}
               />
@@ -50,19 +50,19 @@ const CardSection = () => {
         <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6">
           <ServiceCard
             icon={<FaIndustry size={50} />}
-            title="Industrial Solution"
+            title="Innovation"
             description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
             isActive={false}
           />
           <ServiceCard
             icon={<FaLeaf size={50} />}
-            title="Eco Development"
+            title="Productivity"
             description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
             isActive={true}
           />
           <ServiceCard
             icon={<FaTools size={50} />}
-            title="Modern Technology"
+            title="Best Qualities"
             description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
             isActive={false}
           />

@@ -36,7 +36,7 @@ const ProductComponent = () => {
 
       <div className="py-10 px-2 md:px-4">
         <motion.div
-          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-6 scrollbar-hide"
+          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-6 pb-8 scrollbar-hide"
           variants={container}
           initial="hidden"
           whileInView="visible"
