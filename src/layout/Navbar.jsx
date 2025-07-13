@@ -71,9 +71,9 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-24 left-0 w-full bg-white shadow-md px-4 py-4 md:hidden"
+            className="absolute top-18 left-0 w-full bg-white shadow-md px-4 py-4 md:hidden"
           >
-            <ul className="flex flex-col gap-4 text-lg font-semibold">
+            <ul className="flex flex-col gap-4 text-md font-semibold">
               {menuItems.map((item) => (
                 <li key={item}>
                   <NavLink
