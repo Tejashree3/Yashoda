@@ -109,7 +109,7 @@ const Contactus = () => {
 
           {/* Contact Form */}
           <motion.div
-            className="bg-[#0c0c3c] text-white px-14 py-14 rounded-md shadow-md"
+            className="bg-[#0c0c3c] text-white px-14 py-12 rounded-md shadow-md"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
