@@ -68,7 +68,7 @@ const Contactus = () => {
   };
 
   return (
-    <div className="w-full px-4 py-8 flex flex-col gap-4 relative">
+    <div className="w-full px-4 pb-8 pt-16 flex flex-col gap-4 relative">
       <Toaster
         message={showToaster ? "Service is currently not available." : ""}
         onClose={() => setShowToaster(false)}

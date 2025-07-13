@@ -26,7 +26,7 @@ const Navbar = () => {
       {/* Navbar */}
       <div className=" shadow-md px-2 md:px-20 py-2 flex  justify-between items-center">
         <NavLink to="/">
-          <img src={logo} className="h-22 md:h-24" alt="Logo" />
+          <img src={logo} className="h-14 md:h-24" alt="Logo" />
         </NavLink>
 
         {/* Desktop Menu */}

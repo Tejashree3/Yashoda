@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo and Description */}
 
         <div className="flex justify-center flex-col">
-          <img src={logo} className="w-16 h-16 mb-2" alt="" />
+          <img src={logo} className="w-28 h-24 mb-2" alt="" />
 
           <h2 className="text-2xl font-bold text-orange_color mb-2">
             Yashoda Enterprises

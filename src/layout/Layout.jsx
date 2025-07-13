@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow transition-opacity duration-300 ease-in-out">
+      <main className="flex-grow transition-opacity duration-300 pt-20 ease-in-out">
         <Outlet />
       </main>
       <Footer />
