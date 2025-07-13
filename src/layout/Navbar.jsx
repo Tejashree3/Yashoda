@@ -22,21 +22,21 @@ const Navbar = () => {
     item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
 
   return (
-    <nav className="relative z-50">
+<nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
       {/* Navbar */}
-      <div className=" shadow-md px-2 md:px-20 py-1 flex justify-between items-center">
+      <div className=" shadow-md px-2 md:px-20 py-2 flex  justify-between items-center">
         <NavLink to="/">
-          <img src={logo} className="h-24 md:h-28" alt="Logo" />
+          <img src={logo} className="h-22 md:h-24" alt="Logo" />
         </NavLink>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-md font-semibold">
+        <ul className="hidden md:flex gap-6 text-lg font-semibold">
           {menuItems.map((item) => (
             <li key={item}>
               <NavLink
                 to={getPath(item)}
                 className={({ isActive }) =>
-                  `cursor-pointer ${
+                  `cursor-pointer  ${
                     isActive ? "text-orange_color" : "text-text_navbar"
                   }`
                 }
@@ -73,13 +73,13 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-24 left-0 w-full bg-white shadow-md px-4 py-4 md:hidden"
           >
-            <ul className="flex flex-col gap-4 text-sm font-semibold">
+            <ul className="flex flex-col gap-4 text-lg font-semibold">
               {menuItems.map((item) => (
                 <li key={item}>
                   <NavLink
                     to={getPath(item)}
                     className={({ isActive }) =>
-                      `cursor-pointer ${
+                      `cursor-pointer  ${
                         isActive ? "text-orange_color" : "text-text_navbar"
                       }`
                     }

@@ -21,12 +21,12 @@ const HeroBanner = () => {
       {/* HERO BANNER */}
       <div className="relative h-[100vh]">
         <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Pagination]}
           loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           speed={2000}
           pagination={{ clickable: true }}
-          navigation={true}
+          // navigation={true}
           className="h-full"
         >
           {banners.map((img, index) => (
@@ -48,7 +48,7 @@ const HeroBanner = () => {
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                       We turn vision <br />
-                      <span className="text-blue-300">Factory</span> Solutions
+                      <span className="text-orange_colo">Factory</span> Solutions
                     </h1>
                     <p className="mt-4 text-sm">
                       Industrial Revolution, in modern history, the process of

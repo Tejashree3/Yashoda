@@ -59,7 +59,7 @@ const VisionMissionValues = () => {
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="h-32 md:h-44 object-contain"
+                  className="h-100 md:h-100 object-contain"
                 />
               </div>
             </>
@@ -69,7 +69,7 @@ const VisionMissionValues = () => {
                 <img
                   src={section.image}
                   alt={section.title}
-                  className="h-32 md:h-44 object-contain"
+                  className="h-100 md:h-100 object-contain"
                 />
               </div>
 

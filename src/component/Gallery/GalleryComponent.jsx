@@ -42,9 +42,10 @@ const GalleryComponent = ({ isHomePage = false }) => {
         transition={{ duration: 0.6 }}
       >
         <Header
-          title="Gallery"
+          title="Our"
           subtitle="Our Workshop & Machines"
           color="#b80000"
+          emphasis="Gallery"
         />
       </motion.div>
 

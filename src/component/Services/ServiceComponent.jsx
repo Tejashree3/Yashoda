@@ -52,9 +52,9 @@ const ServiceComponent = () => {
   return (
     <div className="w-full flex flex-col py-16 px-4 md:px-20  gap-4">
       <Header
-        title="Services"
+        title="Our "
         subtitle="We Offer"
-        // emphasis="Touch"
+         emphasis="Services"
         color="#b80000"
       />
       <div className="grid grid-cols-1 md:grid-cols-3 py-16 gap-6">
