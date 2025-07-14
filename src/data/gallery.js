@@ -1,5 +1,9 @@
-import workshop1 from '../asset/gallery/workshop1.webp';
-import workshop2 from '../asset/gallery/workshop2.webp';
+
+import workshop1 from '../asset/gallery/1.jpg';
+import workshop2 from '../asset/gallery/2.jpg';
+import workshop3 from '../asset/gallery/3.jpg';
+import workshop4 from '../asset/gallery/4.jpg';
+import workshop5 from '../asset/gallery/5.jpg';
 
 const gallery = [
     {
@@ -10,6 +14,21 @@ const gallery = [
     {
         link: workshop2,
         title: "Workshop 2",
+        description: "workshop"
+    },
+      {
+        link: workshop3,
+        title: "Workshop 3",
+        description: "workshop"
+    },
+      {
+        link: workshop4,
+        title: "Workshop 4",
+        description: "workshop"
+    },
+  {
+        link: workshop5,
+        title: "Workshop 5",
         description: "workshop"
     },
 

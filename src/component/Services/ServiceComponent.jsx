@@ -11,37 +11,37 @@ import Header from "../commonComponents/Header";
 
 const services = [
   {
-    title: "Renovation Services",
+    title: "HVAC ",
     description:
       "Once you decide to proceed with a renovation project, offers a simple and convenient way to get in touch with us.",
     icon: <FaTools />,
   },
   {
-    title: "Plumbing Services",
+    title: "VALVE ",
     description:
       "Our goal is not just to provide a quick fix but to address the underlying issue to prevent future problems.",
     icon: <FaShower />,
   },
   {
-    title: "Electrical Services",
+    title: "PACKING ",
     description:
       "They will discuss any available options, provide accurate cost estimates, and answer any questions you may have.",
     icon: <FaBolt />,
   },
   {
-    title: "Home Maintenance",
+    title: "FABRICATION ",
     description:
       "They will listen to your concerns, conduct thorough inspections, and identify any areas that may require attention.",
     icon: <FaHome />,
   },
   {
-    title: "Painting and Drywall",
+    title: "SOLAR ",
     description:
       "They will listen to your concerns, conduct thorough inspections, and identify any areas that may require attention.",
     icon: <FaPaintRoller />,
   },
   {
-    title: "Wood & Flooring",
+    title: "ORGANIC FARMS",
     description:
       "We will provide you with a detailed explanation of the recommended wood or flooring services.",
     icon: <FaRulerCombined />,

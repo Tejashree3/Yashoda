@@ -48,11 +48,13 @@ const HeroBanner = () => {
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                       We turn vision <br />
+
                       <span className="text-orange_colo">Factory</span> Solutions
                     </h1>
+
                     <p className="mt-4 text-md">
                       Industrial Revolution, in modern history, the process of
-                      change from an agrarian and handicraft economy to one
+                      change from an agrarian and handicraft economy to one 
                       dominated by industry and machine manufacturing.
                     </p>
                     <Button>Learn More</Button>
