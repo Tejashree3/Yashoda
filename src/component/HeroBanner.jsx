@@ -43,14 +43,14 @@ const HeroBanner = () => {
                     transition={{ duration: 0.8 }}
                     key={index}
                   >
-                    <p className="text-sm text-orange_color mb-2 font-semibold">
+                    <p className="text-md text-orange_color mb-2 font-semibold">
                       WE PROVIDE BEST SATISFIED WORK
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                       We turn vision <br />
                       <span className="text-orange_colo">Factory</span> Solutions
                     </h1>
-                    <p className="mt-4 text-sm">
+                    <p className="mt-4 text-md">
                       Industrial Revolution, in modern history, the process of
                       change from an agrarian and handicraft economy to one
                       dominated by industry and machine manufacturing.
