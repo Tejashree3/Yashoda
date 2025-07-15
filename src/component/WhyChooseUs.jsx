@@ -1,5 +1,5 @@
 import React from "react";
-import sofaImage from "../asset/about.png"; // Replace with your image path
+import sofaImage from "../asset/about_trial.jpg"; // Replace with your image path
 import Header from "./commonComponents/Header";
 
 const WhyChooseUs = () => {

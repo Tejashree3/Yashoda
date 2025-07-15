@@ -1,6 +1,6 @@
 import React from "react";
-import image1 from "../asset/about.png"; // top city image
-import image2 from "../asset/about.png"; // bottom worker image
+import image1 from "../asset/about2.jpg"; // top city image
+import image2 from "../asset/about2.jpg"; // bottom worker image
 import Button from "./commonComponents/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 
