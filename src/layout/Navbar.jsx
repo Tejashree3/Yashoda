@@ -28,7 +28,7 @@ const Navbar = () => {
         <NavLink to="/">
           <div className="flex items-center gap-2">
             <img src={logo} className="h-14 md:h-20" alt="Logo" />
-            <h1 className="text-orange_color font-bold text-2xl">
+            <h1 className="text-orange_color font-bold text-xl md:text-2xl">
               YASHODA
               <br />
               ENTERPRISES
