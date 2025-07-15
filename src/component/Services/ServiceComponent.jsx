@@ -103,52 +103,79 @@ import Header from "../commonComponents/Header";
 
 const faqs = [
   {
-    question: 'Is there a free trial available?',
-    answer:
-      'Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free 30-minute onboarding call to get you up and running. Book a call here.',
+    question: 'HVAC Services',
+    answer: `1. AC Installation
+2. HVAC Repair
+3. Duct Routing
+4. Basement Ventilation
+5. VRV Systems
+6. HVAC Maintenance, Service & AMC
+7. Cold Storage Rooms
+8. Turnkey Solutions`,
     icon: <FaRegCalendarAlt className="text-xl text-gray-600" />,
   },
   {
-    question: 'Can I change my plan later?',
-    answer:
-      'Yes, you can upgrade or downgrade your plan at any time from your account settings.',
+    question: 'Valve Types',
+    answer: `1. Industrial Valve
+2. Ball Valve
+3. Gate Valve
+4. Globe Valve
+5. Butterfly Valve
+6. Diaphragm Valve
+7. Pressure Reducing Valve (PRV)
+8. PTFE Lined Butterfly Valve
+9. Check Valve`,
     icon: <FaRegListAlt className="text-xl text-gray-600" />,
   },
   {
-    question: 'What is your cancellation policy?',
-    answer:
-      'You can cancel your subscription at any time. Your plan will remain active until the end of your billing cycle.',
+    question: 'Pump Solutions',
+    answer: `1. Heat Pump
+2. Water Pump
+3. Heat/Geyser Pump
+4. PPRC`,
     icon: <FaRegTimesCircle className="text-xl text-gray-600" />,
   },
   {
-    question: 'Can other info be added to an invoice?',
-    answer:
-      'Yes, you can add custom billing details to your invoices like company name, tax ID, and address.',
+    question: 'Packing Materials',
+    answer: `1. Air Bubble Roll
+2. Stretch Film
+3. EPE Foam Roll
+4. Angle Board
+5. BOPP Tapes
+6. Masking Tapes
+7. Double Tapes
+8. Floor Marking
+9. HDPE Tapes`,
     icon: <FaRegFileAlt className="text-xl text-gray-600" />,
   },
   {
-    question: 'How does billing work?',
-    answer:
-      'Billing is done monthly or annually depending on your plan. You’ll receive an invoice via email.',
+    question: 'Fabrication',
+    answer: `1. SS Fabrication
+2. MS Fabrication
+3. Fabrication Work at Site
+4. Piping in MS & SS
+5. Piping in MS & SS at Site
+6. Grating (Grill & Railing)
+7. Dosing Systems
+8. Vessels & Tanks`,
     icon: <FaRegCreditCard className="text-xl text-gray-600" />,
   },
   {
-    question: 'How do I change my account email?',
-    answer:
-      'Go to your account settings and update your email in the profile section.',
+    question: 'Solar Systems',
+    answer: `1. On-grid System
+2. Hybrid System
+3. Inverter System
+4. Roof Top System`,
     icon: <FaEnvelope className="text-xl text-gray-600" />,
   },
   {
-    question: 'How does support work?',
-    answer:
-      'We offer 24/7 email and chat support. You can also access our help center for guides and FAQs.',
+    question: 'Organic Farming',
+    answer: `1. Ajara Ghansal Rice
+2. Indrayani Rice
+3. Jowar
+4. Finger Millet / Ragi
+5. Cashew Nut`,
     icon: <FaRegLifeRing className="text-xl text-gray-600" />,
-  },
-  {
-    question: 'Do you provide tutorials?',
-    answer:
-      'Yes, we provide video tutorials, documentation, and webinars to help you get started.',
-    icon: <FaPlayCircle className="text-xl text-gray-600" />,
   },
 ];
 
@@ -160,40 +187,47 @@ const ServiceComponent = () => {
   };
 
   return (
-  <div className="w-full flex flex-col py-16 px-4 md:px-20  gap-4">
-       <Header
-         title="Our "
-         subtitle="We Offer"
-          emphasis="Services"
-         color="#b80000"
-       />
-      {faqs.map((faq, index) => (
-      <div key={index} className="relative border w-full border-gray-300 py-6 rounded-full px-4">
-  {/* Absolute Icon */}
-  <div className="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
-    {faq.icon}
-  </div>
+ <div className="w-full flex flex-col py-16 px-4 md:px-20 gap-4">
+  <Header
+    title="Our "
+    subtitle="We Offer"
+    emphasis="Services"
+    color="#b80000"
+  />
 
-  <button
-    onClick={() => toggleFAQ(index)}
-    className="pl-20 w-full text-left flex justify-between items-start gap-4"
-  >
-    <div className="flex items-start gap-3">
-      <span className="font-medium text-lg text-gray-900">{faq.question}</span>
-    </div>
-    <div className="pt-1 text-gray-600">
-      {openIndex === index ? <FaMinus /> : <FaPlus />}
-    </div>
-  </button>
+  {faqs.map((faq, index) => (
+    <div
+      key={index}
+      className="border w-full border-gray-300 py-4 rounded-md px-4"
+    >
+      <button
+        onClick={() => toggleFAQ(index)}
+        className="w-full text-left flex justify-between items-start gap-4"
+      >
+        <div className="flex items-center gap-4">
+          <div className="w-14 h-14 min-w-[3.5rem] rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+            {faq.icon}
+          </div>
+          <span className="font-medium text-lg text-gray-900">
+            {faq.question}
+          </span>
+        </div>
+        <div className="pt-2 text-gray-600">
+          {openIndex === index ? <FaMinus /> : <FaPlus />}
+        </div>
+      </button>
 
-  {openIndex === index && (
-    <p className="pl-20 mt-2 text-md text-gray-700">{faq.answer}</p>
-  )}
+      {openIndex === index && (
+        <ul className="pl-20 mt-2 text-md text-gray-700 list-disc list-inside space-y-1">
+          {faq.answer.split('\n').map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  ))}
 </div>
 
-
-      ))}
-    </div>
   );
 };
 
