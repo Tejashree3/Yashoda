@@ -23,7 +23,9 @@ const CardSection = () => {
               <ServiceCard
                 icon={<FaIndustry size={30} />}
                 title="Innovation"
-                description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
+                description="Tailored engineering solutions driven by advanced technology and precision.
+
+"
                 isActive={false}
               />
             </SwiperSlide>
@@ -31,7 +33,9 @@ const CardSection = () => {
               <ServiceCard
                 icon={<FaLeaf size={30} />}
                 title="Productivity"
-                description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
+                description="Efficient processes that deliver timely results without compromising quality.
+
+"
                 isActive={true}
               />
             </SwiperSlide>
@@ -39,7 +43,9 @@ const CardSection = () => {
               <ServiceCard
                 icon={<FaTools size={30} />}
                 title="Best Qualities"
-                description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
+                description="Unmatched quality assurance backed by NABL-certified standards and expert craftsmanship.
+
+"
                 isActive={false}
               />
             </SwiperSlide>
@@ -51,19 +57,25 @@ const CardSection = () => {
           <ServiceCard
             icon={<FaIndustry size={50} />}
             title="Innovation"
-            description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
+            description="Tailored engineering solutions driven by advanced technology and precision.
+
+"
             isActive={false}
           />
           <ServiceCard
             icon={<FaLeaf size={50} />}
             title="Productivity"
-            description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
+            description="Efficient processes that deliver timely results without compromising quality.
+
+"
             isActive={true}
           />
           <ServiceCard
             icon={<FaTools size={50} />}
             title="Best Qualities"
-            description="Industry is main lorem ipsum dolor amet, consectetur adipiscing elit."
+            description="Unmatched quality assurance backed by NABL-certified standards and expert craftsmanship.
+
+"
             isActive={false}
           />
         </div>

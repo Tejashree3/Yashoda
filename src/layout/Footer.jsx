@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo and Description */}
 
         <div className="flex justify-center flex-col">
-          <img src={logo} className="w-28 h-24 mb-2" alt="" />
+          <img src={logo} className="w-28  mb-2" alt="" />
 
           <h2 className="text-2xl font-bold text-ortange_color mb-2">
             Yashoda Enterprises
@@ -58,12 +58,42 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-orange_color">
             Our Services
           </h3>
-          <ul className="space-y-2 text-sm">
-            <li>Heat Pump Installation</li>
-            <li>Industrial Piping</li>
-            <li>AC Installation</li>
-            <li>SS & MS Piping</li>
-            <li>HVAC Ducting</li>
+          <ul>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                HVAC Services
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                Valve Types
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                Pump Solutions
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                Packing Materials
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                Fabrication
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                Solar Systems
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="hover:text-[#40afe0]">
+                Organic Farming
+              </a>
+            </li>
           </ul>
         </div>
 

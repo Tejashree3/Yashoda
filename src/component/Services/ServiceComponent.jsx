@@ -85,8 +85,7 @@
 // export default ServiceComponent;
 // components/FAQSection.jsx
 
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   FaRegCalendarAlt,
   FaRegListAlt,
@@ -98,12 +97,20 @@ import {
   FaPlayCircle,
   FaPlus,
   FaMinus,
-} from 'react-icons/fa';
+} from "react-icons/fa";
+import agriculture from "../../asset/services/agriculture.jpg";
+import fabrication from "../../asset/services/fabrication.jpg";
+import hvac from "../../asset/services/hvac.jpg";
+import packaging from "../../asset/services/packaging.jpg";
+import pump from "../../asset/services/pump.png";
+import solar from "../../asset/services/solar.jpg";
+import valve from "../../asset/services/valve.jpg";
+
 import Header from "../commonComponents/Header";
 
 const faqs = [
   {
-    question: 'HVAC Services',
+    question: "HVAC Services",
     answer: `1. AC Installation
 2. HVAC Repair
 3. Duct Routing
@@ -112,10 +119,10 @@ const faqs = [
 6. HVAC Maintenance, Service & AMC
 7. Cold Storage Rooms
 8. Turnkey Solutions`,
-    icon: <FaRegCalendarAlt className="text-xl text-gray-600" />,
+    icon: hvac,
   },
   {
-    question: 'Valve Types',
+    question: "Valve Types",
     answer: `1. Industrial Valve
 2. Ball Valve
 3. Gate Valve
@@ -125,18 +132,18 @@ const faqs = [
 7. Pressure Reducing Valve (PRV)
 8. PTFE Lined Butterfly Valve
 9. Check Valve`,
-    icon: <FaRegListAlt className="text-xl text-gray-600" />,
+    icon: valve,
   },
   {
-    question: 'Pump Solutions',
+    question: "Pump Solutions",
     answer: `1. Heat Pump
 2. Water Pump
 3. Heat/Geyser Pump
 4. PPRC`,
-    icon: <FaRegTimesCircle className="text-xl text-gray-600" />,
+    icon: pump,
   },
   {
-    question: 'Packing Materials',
+    question: "Packing Materials",
     answer: `1. Air Bubble Roll
 2. Stretch Film
 3. EPE Foam Roll
@@ -146,10 +153,10 @@ const faqs = [
 7. Double Tapes
 8. Floor Marking
 9. HDPE Tapes`,
-    icon: <FaRegFileAlt className="text-xl text-gray-600" />,
+    icon: packaging,
   },
   {
-    question: 'Fabrication',
+    question: "Fabrication",
     answer: `1. SS Fabrication
 2. MS Fabrication
 3. Fabrication Work at Site
@@ -158,24 +165,24 @@ const faqs = [
 6. Grating (Grill & Railing)
 7. Dosing Systems
 8. Vessels & Tanks`,
-    icon: <FaRegCreditCard className="text-xl text-gray-600" />,
+    icon: fabrication,
   },
   {
-    question: 'Solar Systems',
+    question: "Solar Systems",
     answer: `1. On-grid System
 2. Hybrid System
 3. Inverter System
 4. Roof Top System`,
-    icon: <FaEnvelope className="text-xl text-gray-600" />,
+    icon: solar,
   },
   {
-    question: 'Organic Farming',
+    question: "Organic Farming",
     answer: `1. Ajara Ghansal Rice
 2. Indrayani Rice
 3. Jowar
 4. Finger Millet / Ragi
 5. Cashew Nut`,
-    icon: <FaRegLifeRing className="text-xl text-gray-600" />,
+    icon: agriculture,
   },
 ];
 
@@ -187,47 +194,46 @@ const ServiceComponent = () => {
   };
 
   return (
- <div className="w-full flex flex-col py-16 px-4 md:px-20 gap-4">
-  <Header
-    title="Our "
-    subtitle="We Offer"
-    emphasis="Services"
-    color="#b80000"
-  />
+    <div className="w-full flex flex-col py-16 px-4 md:px-20 gap-4">
+      <Header
+        title="Our "
+        subtitle="We Offer"
+        emphasis="Services"
+        color="#b80000"
+      />
 
-  {faqs.map((faq, index) => (
-    <div
-      key={index}
-      className="border w-full border-gray-300 py-4 rounded-md px-4"
-    >
-      <button
-        onClick={() => toggleFAQ(index)}
-        className="w-full text-left flex justify-between items-start gap-4"
-      >
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-14 min-w-[3.5rem] rounded-full bg-gray-100 flex items-center justify-center shadow-md">
-            {faq.icon}
-          </div>
-          <span className="font-medium text-lg text-gray-900">
-            {faq.question}
-          </span>
-        </div>
-        <div className="pt-2 text-gray-600">
-          {openIndex === index ? <FaMinus /> : <FaPlus />}
-        </div>
-      </button>
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          className="border w-full border-gray-300 py-4 rounded-md px-4"
+        >
+          <button
+            onClick={() => toggleFAQ(index)}
+            className="w-full text-left flex justify-between items-start gap-4"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 min-w-[3.5rem] p-1 rounded-full bg-gray-100 flex items-center justify-center shadow-xl">
+                <img src={faq.icon} />
+              </div>
+              <span className="font-medium text-lg text-gray-900">
+                {faq.question}
+              </span>
+            </div>
+            <div className="pt-2 text-gray-600">
+              {openIndex === index ? <FaMinus /> : <FaPlus />}
+            </div>
+          </button>
 
-      {openIndex === index && (
-        <ul className="pl-20 mt-2 text-md text-gray-700 list-disc list-inside space-y-1">
-          {faq.answer.split('\n').map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      )}
+          {openIndex === index && (
+            <ul className="pl-20 mt-2 text-md text-gray-700 list-disc list-inside space-y-1">
+              {faq.answer.split("\n").map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
     </div>
-  ))}
-</div>
-
   );
 };
 

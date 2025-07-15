@@ -1,19 +1,26 @@
-import product1 from '../asset/product/product1.webp';
-import product2 from '../asset/product/product2.webp';
-import product3 from '../asset/product/product3.webp';
-import product4 from '../asset/product/product4.webp';
-import product5 from '../asset/product/product5.webp';
-import product6 from '../asset/product/product6.webp';
-import product7 from '../asset/product/product7.webp';
+import customizefabricatedparts from '../asset/product/customizefabricatedparts.jpg';
+import dosingsystem from '../asset/product/dosingsystem.jpg';
+import finugre from '../asset/product/finugre.jpg';
+import heatpump from '../asset/product/heatpump.jpg';
+import hybrid from '../asset/product/hybrid.jpg';
+import ms_pipingfabrication from '../asset/product/ms_pipingfabrication.jpg';
+import msfabricatedtanks from '../asset/product/msfabricatedtanks.jpg';
+import offgrid from '../asset/product/offgrid.jpg';
+import ongrid from '../asset/product/ongrid.jpg';
+import valves from "../asset/product/Valves.jpg";
 
 const products = [
-    { title: "Product 1", image: product1 },
-    { title: "Product 2", image: product2 },
-    { title: "Product 3", image: product3 },
-    { title: "Product 4", image: product4 },
-    { title: "Product 5", image: product5 },
-    { title: "Product 6", image: product6 },
-    { title: "Product 7", image: product7 },
+    { title: "Valves", image: valves },
+    { title: "M S Fabricated Tanks", image: msfabricatedtanks },
+    { title: "Heat Pump", image: heatpump },
+    { title: "Customised Fabricated Parts with Machine components", image: customizefabricatedparts },
+    { title: "M S piping fabrication", image: ms_pipingfabrication },
+    { title: "Organic fingure - millet", image: finugre },
+    { title: "On grid solar System", image: ongrid },
+    { title: "Off grid solar System", image: offgrid },
+    { title: "Hybrid solar System", image: hybrid },
+    { title: "Dosing System", image: dosingsystem },
+
 ];
 
 export default products;
