@@ -57,7 +57,7 @@ const HeroBanner = () => {
                       change from an agrarian and handicraft economy to one
                       dominated by industry and machine manufacturing.
                     </p>
-                    <Button>Learn More</Button>
+                    {/* <Button>Learn More</Button> */}
                   </motion.div>
                 </div>
               </div>

@@ -22,11 +22,18 @@ const Navbar = () => {
     item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
 
   return (
-<nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
       {/* Navbar */}
       <div className=" shadow-md px-2 md:px-20 py-2 flex  justify-between items-center">
         <NavLink to="/">
-          <img src={logo} className="h-14 md:h-24" alt="Logo" />
+          <div className="flex items-center gap-2">
+            <img src={logo} className="h-14 md:h-20" alt="Logo" />
+            <h1 className="text-orange_color font-bold text-2xl">
+              YASHODA
+              <br />
+              ENTERPRISES
+            </h1>
+          </div>
         </NavLink>
 
         {/* Desktop Menu */}
