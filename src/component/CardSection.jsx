@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import { FaIndustry, FaLeaf, FaTools } from "react-icons/fa";
 import ServiceCard from "./ServiceCard";
 
+
+
 const CardSection = () => {
   return (
     <>
