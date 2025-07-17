@@ -9,13 +9,19 @@ const VisionMissionValues = () => {
     {
       title: "OUR MISSION",
       description:
-        "Lorem ipsum dolor sit amet consectetur odio non tellus natoque accumsan. Sed hac enim lorem tempus tortor justo eget scelerisque sed morbi. Senectus urna Vestibulum tincidunt turpis sem magna Nam hendrerit vitae nibh. Auctor Sed urna dignissim malesuada eleifend ultrices justo Curabitur Ma.",
+        "To lead the transformation of the assembly manufacturing industry through sustainable practice, ethical growth and cutting edge innovation that benefit both people and planet.",
+      subpoints : [
+        "Quality and precision focus",
+        "Sustainablity and Innovation focus",
+        "Customer Centric focus",
+        "Growth and Global React focus",
+        "Operations Excellence focus"
+      ]
       image: mission,
     },
     {
       title: "OUR VISION",
-      description:
-        "Lorem ipsum dolor sit amet consectetur odio non tellus natoque accumsan. Sed hac enim lorem tempus tortor justo eget scelerisque sed morbi. Senectus urna Vestibulum tincidunt turpis sem magna Nam hendrerit vitae nibh. Auctor Sed urna dignissim malesuada eleifend ultrices justo Curabitur Maecenas.",
+      description: "To be recognized as a global leader \"IN THE DESIGN AND CONSULTING SUPPLY CHAIN, TRADING \" in Water, Heat, Food Technologies as per required customized solutions.",
       image: vision,
     },
     {
