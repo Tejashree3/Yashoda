@@ -93,13 +93,13 @@ const VisionMissionValues = () => {
                   {section.title}
                 </h2>
                 <p className="text-sm md:text-lg">{section.description}</p>
-                  {section.subpoints && (
+{/*                   {section.subpoints && ( */}
             <ul className="pl-20 mt-2 text-md text-gray-700 list-disc list-inside space-y-1">
               {section.subpoints.map((item, i) => (
                 <li key={i}>{i + 1}. {item}</li>
               ))}
             </ul>
-          )}
+{/*           )} */}
               </div>
             </>
           )}
