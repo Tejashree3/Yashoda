@@ -16,7 +16,7 @@ const VisionMissionValues = () => {
         "Customer Centric focus",
         "Growth and Global React focus",
         "Operations Excellence focus"
-      ]
+      ],
       image: mission,
     },
     {
@@ -34,7 +34,7 @@ const VisionMissionValues = () => {
         "Customer Focus: Understanding and meeting client needs, providing excellent service, and building strong relationships are vital.",
         "Quality: Striving for high-quality products and services, implementing rigorous quality control measures, and delivering on promises are key.",
         "Safety: Prioritizing workplace safety, preventing injuries, and ensuring a safe working environment is crucial for both employees and the company's reputation. Innovation: Continuously seeking new and improved ways to design, engineer, and fabricate products , Development , to stay competitive and meet evolving client needs. Collaboration: Working effectively with clients, suppliers, and employees to achieve common goals and deliver successful projects. Excellence: Striving for the highest standards in all aspects of the business, from design and engineering to manufacturing , Supply and customer service."
-      ]
+      ],
       image: values,
     },
   ];
