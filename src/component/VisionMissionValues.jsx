@@ -22,6 +22,7 @@ const VisionMissionValues = () => {
     {
       title: "OUR VISION",
       description: "To be recognized as a global leader \"IN THE DESIGN AND CONSULTING SUPPLY CHAIN, TRADING \" in Water, Heat, Food Technologies as per required customized solutions.",
+      subpoints: [],
       image: vision,
     },
     {
