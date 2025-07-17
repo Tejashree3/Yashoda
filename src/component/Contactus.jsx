@@ -240,7 +240,7 @@ const Contactus = () => {
           {[
             {
               icon: <FaMapMarkerAlt className="text-xl" />,
-              text: "Gat no. 162B, Tower line, Triveni Nagar, Talawade, Pune – 412109",
+              text: "Gat no. 1542, Jyotiba nagar Road, Sonawane Wasti Chikhali, Pune - 412114",
             },
             {
               icon: <FaEnvelope className="text-xl" />,
@@ -249,8 +249,8 @@ const Contactus = () => {
             },
             {
               icon: <FaPhoneAlt className="text-xl" />,
-              link: "tel:+917776816182",
-              text: "+91 7776816182",
+              link: "tel:+918485847595",
+              text: "+91 8485847595",
             },
           ].map((card, index) => (
             <motion.div
