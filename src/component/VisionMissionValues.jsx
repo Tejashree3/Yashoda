@@ -68,7 +68,7 @@ const VisionMissionValues = () => {
                 <p className="text-sm md:text-lg">{section.description}</p>
               </div>
 
-              <div className="flex items-center justify-center p-6">
+              <div className="flex items-center flex-col-reverse md:flex-row justify-center p-6">
                 <img
                   src={section.image}
                   alt={section.title}
