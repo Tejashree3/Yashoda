@@ -103,9 +103,9 @@ const Footer = () => {
             Contact Us
           </h3>
           <p className="text-sm mb-2">
-            📍 Gat no. 162B, Tower line, Triveni Nagar, Talawade, Pune – 412109
+            📍 Gat no. 1542, Jyotiba nagar Road, Sonawane Wasti Chikhali, Pune - 412114
           </p>
-          <p className="text-sm mb-2">📞 07776816182</p>
+          <p className="text-sm mb-2">📞 08485847595</p>
           <p className="text-sm">✉ yashodaenterprises55@gmail.com</p>
         </div>
       </div>
