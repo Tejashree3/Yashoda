@@ -43,9 +43,7 @@ const CardSection = () => {
               <ServiceCard
                 icon={<FaTools size={30} />}
                 title="Best Qualities"
-                description="Unmatched quality assurance backed by NABL-certified standards and expert craftsmanship.
-
-"
+                description="Our commitment to excellence is unwavering. Each product undergoes rigorous quality checks to ensure it meets and exceeds customers and Industry standards."
                 isActive={false}
               />
             </SwiperSlide>
@@ -73,9 +71,7 @@ const CardSection = () => {
           <ServiceCard
             icon={<FaTools size={50} />}
             title="Best Qualities"
-            description="Unmatched quality assurance backed by NABL-certified standards and expert craftsmanship.
-
-"
+            description="Our commitment to excellence is unwavering. Each product undergoes rigorous quality checks to ensure it meets and exceeds customers and Industry standards."
             isActive={false}
           />
         </div>
