@@ -26,8 +26,15 @@ const VisionMissionValues = () => {
     },
     {
       title: "OUR VALUES",
-      description:
-        "Lorem ipsum dolor sit amet consectetur odio non tellus natoque accumsan. Sed hac enim lorem tempus tortor justo eget scelerisque sed morbi. Senectus urna Vestibulum tincidunt turpis sem magna Nam hendrerit vitae nibh. Auctor Sed urna dignissim malesuada eleifend ultrices justo Curabitur Maecenas.",
+      description: "Integrity, Responsibility, Accountability, Customer Focus and Quality.",
+      subpoints : [
+        "Integrity: Maintaining ethical conduct, adhering to regulations, and building long-term customer relationships are crucial.",
+        "Responsibility: Ensuring client satisfaction, environmental stewardship, workplace safety, and community involvement are important aspects of a responsible company.",
+        "Accountability: Taking ownership of actions and decisions, promoting transparency, and maintaining high ethical standards are essential.",
+        "Customer Focus: Understanding and meeting client needs, providing excellent service, and building strong relationships are vital.",
+        "Quality: Striving for high-quality products and services, implementing rigorous quality control measures, and delivering on promises are key.",
+        "Safety: Prioritizing workplace safety, preventing injuries, and ensuring a safe working environment is crucial for both employees and the company's reputation. Innovation: Continuously seeking new and improved ways to design, engineer, and fabricate products , Development , to stay competitive and meet evolving client needs. Collaboration: Working effectively with clients, suppliers, and employees to achieve common goals and deliver successful projects. Excellence: Striving for the highest standards in all aspects of the business, from design and engineering to manufacturing , Supply and customer service."
+      ]
       image: values,
     },
   ];
