@@ -34,19 +34,48 @@ const AboutUs = () => {
             <span className="block mt-4">formed in 2021.</span>
           </h2>
           <p className="text-gray-600 text-lg mb-4">
-            <span className="inline-block w-3 h-3 bg-orange_color mr-2 align-middle"></span>
-            The business scope of our company includes the material supply,
-            production, installation, fabrications, and manufacturing of Pharma,
-            Food, dairy processing equipment, precision engineering components,
-            assemblies & sub-assemblies, tool room activities, precision machine
-            parts & auto parts. We follow complete Quality Management to ensure
-            a universal standards of products.
+            <span className="inline-block w-3 h-3 bg-orange_color mr-2 align-middle">
+              "Yashoda Group"
+            </span>{" "}
+            is a dynamic and diversified enterprise specializing in integrated
+            supply chain solutions, import-export services, and a broad range of
+            industiral solutions and organic products. With a strong
+            communication to quality and innovation, we bring together a wide
+            spectrum of offerings under one roof through our flagship company,
+            <span className="inline-block w-3 h-3 bg-orange_color mr-2 align-middle">
+              *Yashoda Enterprises*
+            </span>
           </p>
+          <p className="text-sm uppercase text-[#1d1d4f] tracking-widest mb-8">
+            ● Our portfolio includes -
+          </p>
+          <ul className="pl-6 mt-2 text-sm text-gray-600 list-disc list-inside space-y-1">
+            <li>
+              Advanced <strong>Water Heat Pump</strong>
+            </li>
+            <li>
+              <strong>HVAC Solutions</strong>
+            </li>
+            <li>
+              <strong>Standard and Non-Standard Fabrication</strong>
+            </li>
+            <li>
+              <strong>Industrial Valves</strong>
+            </li>
+            <li>
+              <strong>Solar Energy Solutions</strong> for improved efficiency
+            </li>
+            <li>
+              A dedicated vertical for <strong>Organic Farming</strong> and
+              natural products
+            </li>
+          </ul>
           <p className="text-gray-600 text-lg">
-            Meticulous quality control norms are followed from raw material to
-            the final delivery of the products. With this, we assure you that,
-            we will provide you unmatched timely service, competitive price &
-            quality assurance for the product supplied by us.
+            At Yashoda Group, our core objective is simple: to deliver reliable,
+            high-quality products at competitive prices-offering great value our
+            customers trust and appreciate. Whether you're seeking cutting-edge
+            industial solutions or sustainable organic alternatives, we are your
+            dependable partner in progress.
           </p>
 
           {location.pathname !== "/about" && (

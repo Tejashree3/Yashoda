@@ -62,166 +62,166 @@ const VisionMissionValues = () => {
           color="#b80000"
         />
       </div>
-        <div className="hidden md:block">
-
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          className="grid grid-cols-1 md:grid-cols-2 w-full  items-center"
-        >
-          {index % 2 === 0 ? (
-            <>
-              <div
-                className={`text-white  px-10 md:px-16 py-20 flex flex-col justify-center shadow-2xl rounded-xl ${bgColors[index]}`}
-              >
-                <h2 className="text-2xl md:text-6xl font-bold mb-4">
-                  {section.title}
-                </h2>
-                <p className="text-sm md:text-lg">{section.description}</p>
-                {section.subpoints.length > 0 && (
-                  <div className="block ">
-                    <button
-                      className="mt-4 text-sm underline text-white"
-                      onClick={() => toggleAccordion(index)}
-                    >
-                      {openAccordions[index] ? "Hide details" : "Show details"}
-                    </button>
-
-                    {openAccordions[index] && (
-                      <ul className="pl-6 mt-2 text-sm text-gray-100 list-disc list-inside space-y-1">
-                        {section.subpoints.map((item, i) => (
-                          <li key={i}>
-                            {i + 1}. {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              <div className="flex items-center justify-center p-6">
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="h-100 md:h-100 object-contain"
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="flex items-center justify-center p-6">
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="h-100 md:h-100 object-contain"
-                />
-              </div>
-
-              <div
-                className={`text-white  px-10 md:px-16 py-20 flex flex-col justify-center shadow-2xl rounded-xl ${bgColors[index]}`}
-              >
-                <h2 className="text-2xl md:text-6xl font-bold mb-4">
-                  {section.title}
-                </h2>
-                <p className="text-sm md:text-lg">{section.description}</p>
-
-                {section.subpoints.length > 0 && (
-                  <div className="block ">
-                    <button
-                      className="mt-4 text-sm underline text-white"
-                      onClick={() => toggleAccordion(index)}
-                    >
-                      {openAccordions[index] ? "Hide details" : "Show details"}
-                    </button>
-
-                    {openAccordions[index] && (
-                      <ul className="pl-6 mt-2 text-sm text-gray-100 list-disc list-inside space-y-1">
-                        {section.subpoints.map((item, i) => (
-                          <li key={i}>
-                            {i + 1}. {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                )}
-
-                {/*           )} */}
-              </div>
-            </>
-          )}
-        </div>
-      ))}
-</div>
-<div className="block md:hidden">
-{sections.map((section, index) => {
-        const isEven = index % 2 === 0;
-
-        return (
+      <div className="hidden md:block">
+        {sections.map((section, index) => (
           <div
             key={index}
-            className={`flex flex-col md:grid md:grid-cols-2 w-full items-center mb-10 ${
-              isEven ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
+            className="grid grid-cols-1 md:grid-cols-2 w-full  items-center"
           >
-            {/* Image Always First in Mobile */}
-            <div className="w-full flex items-center justify-center p-6">
-              <img
-                src={section.image}
-                alt={section.title}
-                className="h-100 md:h-100 object-contain"
-              />
-            </div>
+            {index % 2 === 0 ? (
+              <>
+                <div
+                  className={`text-white  px-10 md:px-16 py-20 flex flex-col justify-center shadow-2xl rounded-xl ${bgColors[index]}`}
+                >
+                  <h2 className="text-2xl md:text-6xl font-bold mb-4">
+                    {section.title}
+                  </h2>
+                  <p className="text-sm md:text-lg">{section.description}</p>
+                  {section.subpoints.length > 0 && (
+                    <div className="block ">
+                      <button
+                        className="mt-4 text-sm underline text-white"
+                        onClick={() => toggleAccordion(index)}
+                      >
+                        {openAccordions[index]
+                          ? "Hide details"
+                          : "Show details"}
+                      </button>
 
-            {/* Content Box */}
-            <div
-              className={`text-white px-6 md:px-16 py-8 md:py-20 flex flex-col justify-center shadow-2xl rounded-xl w-full ${bgColors[index]}`}
-            >
-              <h2 className="text-2xl md:text-6xl font-bold mb-4">
-                {section.title}
-              </h2>
-              <p className="text-sm md:text-lg">{section.description}</p>
-
-              {/* Accordion if subpoints exist */}
-              {section.subpoints.length > 0 && (
-                <div className="mt-4">
-                  {/* Desktop: always show */}
-                  <ul className="hidden md:block pl-10 mt-2 text-md text-gray-200 list-disc list-inside space-y-1">
-                    {section.subpoints.map((item, i) => (
-                      <li key={i}>
-                        {i + 1}. {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Mobile: toggle accordion */}
-                  <div className="block md:hidden">
-                    <button
-                      className="mt-4 text-sm underline text-white"
-                      onClick={() => toggleAccordion(index)}
-                    >
-                      {openAccordions[index] ? "Hide details" : "Show details"}
-                    </button>
-
-                    {openAccordions[index] && (
-                      <ul className="pl-6 mt-2 text-sm text-gray-100 list-disc list-inside space-y-1">
-                        {section.subpoints.map((item, i) => (
-                          <li key={i}>
-                            {i + 1}. {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                      {openAccordions[index] && (
+                        <ul className="pl-6 mt-2 text-sm text-gray-100 list-disc list-inside space-y-1">
+                          {section.subpoints.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
+
+                <div className="flex items-center justify-center p-6">
+                  <img
+                    src={section.image}
+                    alt={section.title}
+                    className="h-100 md:h-100 object-contain"
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex items-center justify-center p-6">
+                  <img
+                    src={section.image}
+                    alt={section.title}
+                    className="h-100 md:h-100 object-contain"
+                  />
+                </div>
+
+                <div
+                  className={`text-white  px-10 md:px-16 py-20 flex flex-col justify-center shadow-2xl rounded-xl ${bgColors[index]}`}
+                >
+                  <h2 className="text-2xl md:text-6xl font-bold mb-4">
+                    {section.title}
+                  </h2>
+                  <p className="text-sm md:text-lg">{section.description}</p>
+
+                  {section.subpoints.length > 0 && (
+                    <div className="block ">
+                      <button
+                        className="mt-4 text-sm underline text-white"
+                        onClick={() => toggleAccordion(index)}
+                      >
+                        {openAccordions[index]
+                          ? "Hide details"
+                          : "Show details"}
+                      </button>
+
+                      {openAccordions[index] && (
+                        <ul className="pl-6 mt-2 text-sm text-gray-100 list-disc list-inside space-y-1">
+                          {section.subpoints.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+
+                  {/*           )} */}
+                </div>
+              </>
+            )}
           </div>
-        );
-      })}
-</div>
-      
+        ))}
+      </div>
+      <div className="block md:hidden">
+        {sections.map((section, index) => {
+          const isEven = index % 2 === 0;
+
+          return (
+            <div
+              key={index}
+              className={`flex flex-col md:grid md:grid-cols-2 w-full items-center mb-10 ${
+                isEven ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
+            >
+              {/* Image Always First in Mobile */}
+              <div className="w-full flex items-center justify-center p-6">
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="h-100 md:h-100 object-contain"
+                />
+              </div>
+
+              {/* Content Box */}
+              <div
+                className={`text-white px-6 md:px-16 py-8 md:py-20 flex flex-col justify-center shadow-2xl rounded-xl w-full ${bgColors[index]}`}
+              >
+                <h2 className="text-2xl md:text-6xl font-bold mb-4">
+                  {section.title}
+                </h2>
+                <p className="text-sm md:text-lg">{section.description}</p>
+
+                {/* Accordion if subpoints exist */}
+                {section.subpoints.length > 0 && (
+                  <div className="mt-4">
+                    {/* Desktop: always show */}
+                    <ul className="hidden md:block pl-10 mt-2 text-md text-gray-200 list-disc list-inside space-y-1">
+                      {section.subpoints.map((item, i) => (
+                        <li key={i}>
+                          {i + 1}. {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Mobile: toggle accordion */}
+                    <div className="block md:hidden">
+                      <button
+                        className="mt-4 text-sm underline text-white"
+                        onClick={() => toggleAccordion(index)}
+                      >
+                        {openAccordions[index]
+                          ? "Hide details"
+                          : "Show details"}
+                      </button>
+
+                      {openAccordions[index] && (
+                        <ul className="pl-6 mt-2 text-sm text-gray-100 list-disc list-inside space-y-1">
+                          {section.subpoints.map((item, i) => (
+                            <li key={i}>
+                              {i + 1}. {item}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

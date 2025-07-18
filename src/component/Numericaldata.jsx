@@ -18,15 +18,15 @@ const Numericaldata = () => {
           <p className="text-md text-gray-600 mt-1">Man Power</p>
         </div>
         <div>
-          <h3 className="text-6xl font-bold text-black">40+</h3>
+          <h3 className="text-6xl font-bold text-black">10+</h3>
           <p className="text-md text-gray-600 mt-1">Machines</p>
         </div>
         <div>
-          <h3 className="text-6xl font-bold text-black">5+</h3>
+          <h3 className="text-6xl font-bold text-black">15+</h3>
           <p className="text-md text-gray-600 mt-1">Products</p>
         </div>
         <div>
-          <h3 className="text-6xl font-bold text-black">7+</h3>
+          <h3 className="text-6xl font-bold text-black">15+</h3>
           <p className="text-md text-gray-600 mt-1">Services</p>
         </div>
       </div>
