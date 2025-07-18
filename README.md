@@ -104,3 +104,18 @@ Continuously seeking new and improved ways to design, engineer, and fabricate pr
 Working effectively with clients, suppliers, and employees to achieve common goals and deliver successful projects. 
 *Excellence:*
 Striving for the highest standards in all aspects of the business, from design and engineering to manufacturing , Supply and customer service.
+
+About Us
+
+**Yashoda Group** is a dynamic and diversified enterprise specializing in integrated supply chain solutions, import-export services, and a broad range of industrial solutions and organic products. With a strong commitment to quality and innovation, we bring together a wide spectrum of offerings under one roof through our flagship company, **Yashoda Enterprises**.
+
+Our portfolio includes:
+
+* Advanced **Water Heat Pump**   
+* ⁠ **HVAC Solutions**
+* **Standard and Non-Standard Fabrication**
+* **Industrial Valves**
+* **Solar Energy Solutions** for improved efficiency .
+* A dedicated vertical for **Organic Farming** and natural products
+
+At Yashoda Group, our core objective is simple: to deliver reliable, high-quality products at competitive prices—offering great value our customers trust and appreciate. Whether you’re seeking cutting-edge industrial solutions or sustainable organic alternatives, we are your dependable partner in progress.
