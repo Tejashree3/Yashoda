@@ -34,17 +34,13 @@ const AboutUs = () => {
             <span className="block mt-4">formed in 2021.</span>
           </h2>
           <p className="text-gray-600 text-lg mb-4">
-            <span className="inline-block w-3 h-3 bg-orange_color mr-2 align-middle">
-              "Yashoda Group"
-            </span>{" "}
-            is a dynamic and diversified enterprise specializing in integrated
-            supply chain solutions, import-export services, and a broad range of
-            industiral solutions and organic products. With a strong
-            communication to quality and innovation, we bring together a wide
-            spectrum of offerings under one roof through our flagship company,
-            <span className="inline-block w-3 h-3 bg-orange_color mr-2 align-middle">
-              *Yashoda Enterprises*
-            </span>
+            <strong>"Yashoda Group"</strong> is a dynamic and diversified
+            enterprise specializing in integrated supply chain solutions,
+            import-export services, and a broad range of industiral solutions
+            and organic products. With a strong communication to quality and
+            innovation, we bring together a wide spectrum of offerings under one
+            roof through our flagship company,
+            <strong>*Yashoda Enterprises*</strong>
           </p>
           <p className="text-sm uppercase text-[#1d1d4f] tracking-widest mb-8">
             ● Our portfolio includes -
