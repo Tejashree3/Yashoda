@@ -36,7 +36,7 @@ const AboutUs = () => {
           <p className="text-gray-600 text-lg mb-4">
             <strong>"Yashoda Group"</strong> is a dynamic and diversified
             enterprise specializing in integrated supply chain solutions,
-            import-export services, and a broad range of industiral solutions
+            import-export services, and a broad range of industrial solutions
             and organic products. With a strong communication to quality and
             innovation, we bring together a wide spectrum of offerings under one
             roof through our flagship company,
@@ -70,7 +70,7 @@ const AboutUs = () => {
             At Yashoda Group, our core objective is simple: to deliver reliable,
             high-quality products at competitive prices-offering great value our
             customers trust and appreciate. Whether you're seeking cutting-edge
-            industial solutions or sustainable organic alternatives, we are your
+            industrial solutions or sustainable organic alternatives, we are your
             dependable partner in progress.
           </p>
 
