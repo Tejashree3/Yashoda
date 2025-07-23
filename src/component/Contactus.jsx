@@ -259,8 +259,8 @@ src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3779.500715095125!2d7
             },
             {
               icon: <FaEnvelope className="text-xl" />,
-              link: "mailto:yashodaenterprises55@gmail.com",
-              text: "yashodaenterprises55@gmail.com",
+              link: "mailto:info@yashodaenterprises.org",
+              text: "info@yashodaenterprises.org",
             },
             {
               icon: <FaPhoneAlt className="text-xl" />,
