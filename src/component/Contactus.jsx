@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Header from "./commonComponents/Header";
+import emailjs from "@emailjs/browser";
 
 // Toaster Component with Animation
 const Toaster = ({ message, onClose }) => (
@@ -57,20 +58,34 @@ const Contactus = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formErrors = validate();
+
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
     } else {
-      setFormData({ fullName: "", email: "", subject: "", message: "" });
-      setErrors({});
-      setShowToaster(true);
-      setTimeout(() => setShowToaster(false), 4000);
+      emailjs
+        .send(
+          "service_xlfyutf",
+          "template_hrpvcbs",
+          formData,
+          "WjLGYt8TbwYjRGAIh"
+        )
+        .then(() => {
+          setFormData({ fullName: "", email: "", subject: "", message: "" });
+          setErrors({});
+          setShowToaster(true);
+          setTimeout(() => setShowToaster(false), 4000);
+        })
+        .catch((error) => {
+          console.error("EmailJS error:", error);
+          // Optional: You can show an error toaster here
+        });
     }
   };
 
   return (
     <div className="w-full px-4 pb-8 pt-16 flex flex-col gap-4 relative">
       <Toaster
-        message={showToaster ? "Service is currently not available." : ""}
+        message={showToaster ? "Email Received Successfully." : ""}
         onClose={() => setShowToaster(false)}
       />
 
