@@ -106,7 +106,7 @@ const Footer = () => {
             📍 Gat no. 1542, Jyotiba nagar Road, Sonawane Wasti Chikhali, Pune - 412114
           </p>
           <p className="text-sm mb-2">📞 08485847595</p>
-          <p className="text-sm">✉ yashodaenterprises55@gmail.com</p>
+          <p className="text-sm">✉ info@yashodaenterprises.org</p>
         </div>
       </div>
 
