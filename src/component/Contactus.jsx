@@ -112,8 +112,9 @@ const Contactus = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
+           
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.82226057719!2d73.78246898643589!3d18.671970237202917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b77a3fbeaa05%3A0x5323817838af9f0c!2s162%2C%20Tower%20Line%20Rd%2C%20Premsadan%20Housing%20Society%2C%20Hanuman%20Nagar%2C%20Chikhali%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20412114!5e0!3m2!1sen!2sin!4v1752329219907!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3778.9361714415386!2d73.83897777519631!3d18.711675582419293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDQyJzQyLjAiTiA3M8KwNTAnMjkuNiJF!5e0!3m2!1sen!2sin!4v1753193032670!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"             
               height="100%"
               width="100%"
               allowFullScreen=""
