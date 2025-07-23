@@ -118,6 +118,8 @@ src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3779.500715095125!2d7
               loading="lazy"
               className="rounded-md border"
               referrerpolicy="no-referrer-when-downgrade"
+                height="100%"
+              width="100%"
             ></iframe>
           </motion.div>
 
